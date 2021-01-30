@@ -23,6 +23,7 @@ module.exports.run = async (bot, message, args, prefix) => {
   .addField(`\`${prefix}coinflip\``, "Test Your Luck See if Heads for Tails Comes")
   .addField(`\`${prefix}ascii\``, "Converts Text to Ascii")
   .addField(`\`${prefix}rob\``, "Have Fun By Virtually Robbing Someone via Mention")
+  .addField(`\`${prefix}binary\``, 'Turn Text to Binary')
   .addField(`\`${prefix}say\``, "Repeats What You Said")
   .setTimestamp();
 

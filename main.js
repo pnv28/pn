@@ -62,7 +62,7 @@ bot.on("message", async message => {
 
 
   let commandfile = bot.commands.get(command.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
+  if(commandfile) commandfile.run(bot,message,args,prefix);
 
 })
 
