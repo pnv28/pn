@@ -68,6 +68,10 @@ module.exports.run = async (bot, message, args, prefix) => {
   const timeout = "120000";
 
   pagination(message, pages, emojiList, timeout);
+
+  if(error){
+    message.channel.send('Do I Have Permissions to Send Embed')
+  }
 }
 
 module.exports.help = {
