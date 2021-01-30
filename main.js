@@ -5,7 +5,7 @@ const fs = require("fs");
 const DBL = require('dblapi.js');
 const db = require('quick.db')
 bot.commands = new Discord.Collection();
-const dbl = new DBL( config.topapi, bot)
+const dbl = new DBL( process.env.topapi, bot)
 
 fs.readdir("./commands/", (err, files) => {
 
