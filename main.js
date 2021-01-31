@@ -55,7 +55,7 @@ bot.on("message", async message => {
   let prefixes = await db.fetch(`prefix_${message.guild.id}`)
 
   if(prefixes === null){
-    prefix = "!"
+    prefix = process.env.botprefix
   } else{
     prefix = prefixes
   }
