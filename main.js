@@ -1,10 +1,16 @@
 const Discord = require("discord.js")
 const bot = new Discord.Client();
+const mongoose = require('mongoose')
 const fs = require("fs");
 const DBL = require('dblapi.js');
 const db = require('quick.db')
-bot.commands = new Discord.Collection();
 const dbl = new DBL( process.env.topapi, bot)
+bot.commands = new Discord.Collection();
+
+mongoose.connect('mongodb+srv://pnv28:spkpkhemka@cluster0.nahwf.mongodb.net/Data', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
 
 fs.readdir("./commands/", (err, files) => {
 
